@@ -1,0 +1,23 @@
+<xlue>	<control class="VisualAssistant.List">		<method_def>			<InsertItems file="PropertyList.xml.lua" func="InsertItems"/>			<GetDataList file="PropertyList.xml.lua" func="GetDataList"/>		</method_def>		<event_def>			<OnSelectChange>				<param>					<int/>		<!--		item对象	-->				</param>			</OnSelectChange>		</event_def>		<objtemplate>			<children>				<obj id="bkg" class="TextureObject">					<attr>						<left>0</left>						<top>0</top>						<width>father.width</width>						<height>father.height</height>						<texture>texture.bttaskdlg.tab_client.bkg</texture>					</attr>					<children>						<obj id="list" class="VisualAssistant.BaseList">							<attr>								<left>0</left>								<top>0</top>								<width>father.width</width>								<height>father.height</height>								<ItemHeight>23</ItemHeight>								<ItemClass>VisualAssistant.PropertyItem</ItemClass>							</attr>							<eventlist>								<event name="OnInitItem" file="PropertyList.xml.lua" func="list_OnInitItem" />								<event name="OnUpdateView" file="PropertyList.xml.lua" func="list_OnUpdateView" />							</eventlist>						</obj>					</children>				</obj>				</children>			<eventlist>				<event name="OnInitControl" file="PropertyList.xml.lua" func="OnInitControl"/>			</eventlist>		</objtemplate>	</control>		<control class="VisualAssistant.PropertyItem">
+		<attr_def>
+			
+		</attr_def>
+		<method_def>
+			<SetName file="PropertyList.xml.lua" func="item_SetName"/>				<SetValue file="PropertyList.xml.lua" func="item_SetValue"/>
+		</method_def>
+		<event_def>
+			
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="name" class="TextObject">
+					<attr>
+						<left>10</left>
+						<width>60</width>
+						<height>father.height</height>						<valign>center</valign>
+					</attr>
+				</obj>								<obj id="value" class="VisualAssistant.EditableText">					<attr>						<left>70</left>						<top>2</top>						<width>70</width>						<height>20</height>					</attr>					<eventlist>						<event name="OnTextChange" file="PropertyList.xml.lua" func="value_OnTextChange" />					</eventlist>				</obj>							
+			</children>
+		</objtemplate>
+	</control>
+</xlue>

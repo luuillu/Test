@@ -1,0 +1,41 @@
+<xlue>
+	<objtemplate id = "VisulAssistant.utility.systembutton" class = "Thunder.System.ButtonEx.Ctrl">
+		<attr>
+			<left>father.width - 48</left>
+			<top>-1</top>
+			<width>49</width>
+			<height>22</height>
+			<MaxShow>false</MaxShow>
+			<MiniShow>false</MiniShow>
+		</attr>
+		<eventlist>
+			<event name="OnInitControl" file="utility.xml.lua" func="systembutton_OnInitControl" />
+			<event name="OnClose" file="utility.xml.lua" func="systembutton_OnClose" />
+			<event name="OnMinisize" file="utility.xml.lua" func="systembutton_OnMinisize" />
+			<event name="OnMaxSize" file="utility.xml.lua" func="systembutton_OnMaxSize" />
+			<event name="OnReStore" file="utility.xml.lua" func="systembutton_OnMaxSize" />
+		</eventlist>		
+	</objtemplate>
+	
+	<objtemplate id = "VisulAssistant.utility.systembutton.min" templateid = "VisulAssistant.utility.systembutton">
+		<attr>
+			<left>father.width - 61</left>
+			<top>0</top>
+			<width>49+25</width>
+			<MaxShow>false</MaxShow>
+			<MiniShow>true</MiniShow>
+			<ItemWidthIsSame>false</ItemWidthIsSame>			
+		</attr>
+	</objtemplate>
+	
+	<objtemplate id = "VisulAssistant.utility.systembutton.minmax" templateid = "VisulAssistant.utility.systembutton">
+		<attr>
+			<left>father.width-89</left>
+			<top>0</top>
+			<width>98</width>
+			<MaxShow>true</MaxShow>
+			<MiniShow>true</MiniShow>
+			<ItemWidthIsSame>false</ItemWidthIsSame>			
+		</attr>
+	</objtemplate>	
+</xlue>

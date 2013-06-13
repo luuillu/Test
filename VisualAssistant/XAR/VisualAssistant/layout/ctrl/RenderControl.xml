@@ -1,0 +1,63 @@
+<xlue>
+	<control class="VisualAssistant.RenderControl">
+		<attr_def>
+			
+		</attr_def>
+		<method_def>
+			<GetBitmap file="RenderControl.xml.lua" func="GetBitmap" />
+		</method_def>
+		<event_def>
+			
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="VisualAssistant.RenderControl.bkg" class="LayoutObject">
+					<attr>
+						<left></left>
+						<top></top>
+						<width>father.width</width>
+						<height>father.height</height>
+					</attr>
+					<children>
+						<obj id="test" class="ImageObject">
+							<attr>
+								<left></left>
+								<top></top>
+								<width>1000</width>
+								<height>500</height>
+								<image>dologin.titleicon</image>
+							</attr>
+							<children>
+								
+							</children>
+							<eventlist>
+								
+							</eventlist>
+						</obj>
+					</children>
+					<eventlist>
+						
+					</eventlist>
+				</obj>
+			</children>
+		</objtemplate>
+	</control>
+	
+	<objtreetemplate id="VisualAssistant.RenderControl.tree" class="ObjectTreeTemplate">
+		<attr>
+			<left>-2000</left>
+			<top>-2000</top>
+			<width>2000</width>
+			<height>2000</height>
+		</attr>
+		
+		<obj id="VisualAssistant.RenderObject" class="VisualAssistant.RenderControl">
+			<attr>
+				<left></left>
+				<top></top>
+				<width></width>
+				<height></height>
+			</attr>
+		</obj>
+	</objtreetemplate>
+</xlue>

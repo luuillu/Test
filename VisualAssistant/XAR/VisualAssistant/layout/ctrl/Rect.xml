@@ -1,0 +1,41 @@
+<xlue>
+	<control class="VisualAssistant.Rect">
+		<attr_def>
+			
+		</attr_def>
+		<method_def>
+			
+		</method_def>
+		<event_def>
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="rect.current" class="RectangleObject">
+					<attr>
+						<width>father.width</width>
+						<height>father.height</height>
+						<pen>pen.solid</pen>				
+						<brush>brush.null</brush>
+						
+					</attr>	
+				</obj>
+				<obj id="rect.parent" class="RectangleObject">
+					<attr>
+						<width>father.width</width>
+						<height>father.height</height>
+						<pen>pen.solid</pen>				
+						<brush>brush.null</brush>
+						<zorder>50</zorder>
+					</attr>	
+				</obj>					
+			</children>
+			<eventlist>
+				<event name="OnInitControl" file="Rect.xml.lua" func="OnInitControl" />
+				<event name="OnLButtonDown" file="Rect.xml.lua" func="OnLButtonDown" />
+				<event name="OnLButtonUp" file="Rect.xml.lua" func="OnLButtonUp" />
+				<event name="OnMouseMove" file="Rect.xml.lua" func="OnMouseMove" />	
+				<event name="OnKeyDown" file="Rect.xml.lua" func="OnKeyDown" />	
+			</eventlist>
+		</objtemplate>
+	</control>
+</xlue>

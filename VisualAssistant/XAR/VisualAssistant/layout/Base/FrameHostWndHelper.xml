@@ -1,0 +1,151 @@
+<xlue>
+    <hostwndtemplate id="VisulAssistant.FrameHostWndHelper.wnd" class="FrameHostWnd">
+        <attr>
+			<layered>1</layered>
+			<width>0</width>
+			<height>0</height>
+			<appwindow>1</appwindow>
+        </attr>
+        <eventlist>
+			 <event name="OnCreate" >	 
+				local arg = {...}
+				self = arg[1]
+				self:Center()
+				XLGetGlobal( "xunlei.KeyHelper" ):FilterMessage( self )
+				
+				local tree = self:GetBindUIObjectTree()
+				local ctrl = tree:GetUIObject("msgboxdlg.border")
+				local root = tree:GetRootObject()
+			
+				local templateMananger = XLGetObject("Xunlei.UIEngine.TemplateManager")
+				local popAniT = templateMananger:GetTemplate("Dlg.PopAni","AnimationTemplate")
+				if popAniT then
+					local popAni = popAniT:CreateInstance()
+					popAni:BindObj(ctrl)
+					tree:AddAnimation(popAni)
+					popAni:Resume()
+				end
+				XLGetGlobal( "xunlei.KeyHelper" ):InitKeyList(tree)
+				return true	
+			 </event>
+			 <event name="OnDestroy" >
+				local arg = {...}
+				XLGetGlobal( "xunlei.KeyHelper" ):UninitKeyList(arg[1]:GetBindUIObjectTree())
+				
+			 </event>	
+			 
+			 <event name="OnSize">
+				local arg = {...}
+				local objectTree = arg[1]:GetBindUIObjectTree()
+				local rootObject = objectTree:GetRootObject()
+				local width = arg[3]
+				local height = arg[4]
+				rootObject:SetObjPos(0, 0, width, height)
+				
+				-- 最大化的时候背景纹理有空隙，再张开点。
+				if type_ == "max" then
+					rootObject:SetObjPos(-7, -7, width+6, height+7)
+				end
+			 </event>				 
+        </eventlist>
+    </hostwndtemplate>
+	
+
+	<objtreetemplate id="VisulAssistant.FrameHostWndHelper.tree" class="ObjectTreeTemplate">
+        <attr>
+            <left>-200</left>
+            <top>-200</top>
+            <width>2000</width>
+            <height>2000</height>
+        </attr>
+        <obj id="msgboxdlg.ctrl" class="LayoutObject">
+            <attr>
+                <left>15</left>
+                <top>15</top>
+                <width>404</width>
+                <height>175</height>
+            </attr>
+            <children>
+                <obj id="msgboxdlg.border" class="LayoutObject">
+                    <attr>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>father.width</width>
+                        <height>father.height</height>
+                    </attr>
+                    <children>
+						
+                        <obj id="msgboxdlg.bkg" class="TextureObject">
+                            <attr>
+                                <left>8</left>
+                                <top>8</top>
+                                <width>father.width-16</width>
+                                <height>father.height-16</height>
+                                <zorder>-100</zorder>
+                            </attr>
+                            <children>
+								<obj id="msgboxdlg.bkgctrl" class="FillObject">
+									<attr>
+										<left>0</left>
+										<top>0</top>
+										<width>father.width</width>
+										<height>father.height</height>
+										<zorder>-600</zorder>
+										<filltype>Monochrome</filltype>
+										
+										<srccolor>system.white</srccolor>
+										
+										<alpha>255</alpha>
+									</attr>
+								</obj>
+								
+                                <obj id="msgboxdlg.caption" class="CaptionObject">
+                                    <attr>
+                                        <left>0</left>
+                                        <top>0</top>
+                                        <width>father.width</width>
+                                        <height>24</height>
+                                        <zorder>1000</zorder>
+                                    </attr>
+                                    <eventlist>
+                                        <event name="OnLButtonDbClick">
+                                            return 0, true
+                                        </event>
+                                    </eventlist>
+                                    <children>
+<!--                                         <obj id="msgboxdlg.title" class="TextObject">
+                                            <attr>
+                                                <left>5</left>
+                                                <top>3</top>
+                                                <width>100</width>
+                                                <height>18</height>
+                                                <font>font.subpanel.title</font>
+                                                <textcolor>system.title</textcolor>
+												<effect>bright</effect>
+												<effectcolor>system.title.effect</effectcolor>
+                                                <text>提示</text>
+                                                <texttype>freetype</texttype>
+                                                <zorder>-500</zorder>
+                                            </attr>
+                                        </obj> -->
+                                        <obj id="msgboxdlg.btn.close" class="Thunder.System.ButtonEx.Ctrl">
+                                        </obj>
+                                    </children>
+                                </obj>
+								<obj id="Object" class="LayoutObject">
+									<attr>
+										<left></left>
+										<top></top>
+										<width></width>
+										<height></height>
+                                    </attr>
+								</obj>
+                            </children>
+                        </obj>
+                    </children>
+                </obj>
+            </children>
+        </obj>
+    </objtreetemplate>
+
+</xlue>

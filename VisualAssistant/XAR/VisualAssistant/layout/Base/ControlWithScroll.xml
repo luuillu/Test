@@ -1,0 +1,63 @@
+<xlue>
+	<control class="Assistant.ControlWithScroll">
+		<attr_def>
+			<attr name="BindViewID" type="string" ></attr>
+		</attr_def>
+		<method_def>
+			<SetBkgRange file="ControlWithScroll.xml.lua" func="SetBkgRange"/>
+			<UpdateView file="ControlWithScroll.xml.lua" func="UpdateViewSize"/>
+			<Navigate file="ControlWithScroll.xml.lua" func="Navigate"/>
+		</method_def>
+		<event_def>
+			<OnViewPosChange>
+				<param>
+					<int/>
+					<int/>
+					<int/>
+					<int/>
+				</param>
+			</OnViewPosChange>
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="vscroll" class="VisualAssistant.ScrollBar">
+					<attr>
+						<Type>1</Type>
+						<left>father.width-12</left>
+						<top>0</top>
+						<width>12</width>
+						<height>father.height</height>
+						<zorder>500</zorder>
+					</attr>
+
+					<eventlist>
+						<event name="OnShowChange" file="ControlWithScroll.xml.lua" func="scroll_OnShowChange"/>
+						<event name="OnViewChange" file="ControlWithScroll.xml.lua" func="scroll_OnViewChange"/>
+						<event name="OnPosChange" file="ControlWithScroll.xml.lua" func="scroll_OnPosChange"/>
+					</eventlist>
+
+				</obj>
+				<obj id="hscroll" class="VisualAssistant.ScrollBar">
+					<attr>
+						<Type>2</Type>
+						<left>0</left>
+						<top>father.height-12</top>
+						<width>father.width - 12</width>
+						<height>12</height>
+						<zorder>500</zorder>
+					</attr>
+					<eventlist>
+							<event name="OnShowChange" file="ControlWithScroll.xml.lua" func="scroll_OnShowChange"/>
+							<event name="OnViewChange" file="ControlWithScroll.xml.lua" func="scroll_OnViewChange"/>
+							<event name="OnPosChange" file="ControlWithScroll.xml.lua" func="scroll_OnPosChange"/>
+					</eventlist>
+				</obj>
+			</children>
+			<eventlist>
+				<event name="OnInitControl" file="ControlWithScroll.xml.lua" func="OnInitControl" />
+				<event name="OnDestroy" file="ControlWithScroll.xml.lua" func="OnDestroy" />
+			</eventlist>
+		</objtemplate>
+	</control>
+
+</xlue>

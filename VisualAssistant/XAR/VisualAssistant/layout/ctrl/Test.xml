@@ -1,0 +1,53 @@
+<xlue>
+	<control class="VisualAssistant.Test">
+		<attr_def>
+			
+		</attr_def>
+		<method_def>
+			
+		</method_def>
+		<event_def>
+			
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="v" class="VisualAssistant.ScrollBar">
+					<attr>
+						<left>100</left>
+						<top></top>
+						<width>11</width>
+						<height>father.height-30</height>
+						<Type>1</Type>
+						<zorder>10000</zorder>
+					</attr>
+					<children>
+						
+					</children>
+					<eventlist>
+						
+					</eventlist>
+				</obj>
+				<obj id="h" class="VisualAssistant.ScrollBar">
+					<attr>
+						<left></left>
+						<top>100</top>
+						<width>father.width-30</width>
+						<height>11</height>
+						<Type>2</Type>
+						<zorder>10000</zorder>
+					</attr>
+					<children>
+						
+					</children>
+					<eventlist>
+						
+					</eventlist>
+				</obj>
+			</children>
+			<eventlist>
+				<event name="OnInitControl" file="Test.xml.lua" func="OnInitControl" />
+			</eventlist>
+		</objtemplate>
+	</control>
+
+</xlue>

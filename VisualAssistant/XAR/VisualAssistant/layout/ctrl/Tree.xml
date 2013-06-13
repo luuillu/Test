@@ -1,0 +1,118 @@
+<xlue>
+	<control class="VisualAssistant.Tree">
+		<attr_def>
+			
+		</attr_def>
+		<method_def>
+			<GetSelectItem file="Tree.xml.lua" func="GetSelectItem" />
+			<SetSelectItem name="OnInitItem" file="Tree.xml.lua" func="SetSelectItem" />
+		</method_def>
+		<event_def>
+			
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="list" class="VisualAssistant.BaseList">
+					<attr>
+						<left></left>
+						<top></top>
+						<width>father.width</width>
+						<height>father.height</height>
+						<ItemClass>VisualAssistant.Tree.Item</ItemClass>
+					</attr>
+					<children>
+						
+					</children>
+					<eventlist>
+ 						<event name="OnInitItem" file="Tree.xml.lua" func="list_OnInitItem" />
+						<event name="OnUpdateView" file="Tree.xml.lua" func="list_OnUpdateView" />
+						<event name="OnKeyDown" file="Tree.xml.lua" func="list_OnKeyDown" />
+					</eventlist>
+				</obj>
+			</children>
+			<eventlist>
+				<event name="OnInitControl" file="Tree.xml.lua" func="OnInitControl" />
+			</eventlist>
+		</objtemplate>
+	</control>
+	
+	<control class="VisualAssistant.Tree.Item">
+		<attr_def>
+			
+		</attr_def>
+		<method_def>
+			<SetLevel file="Tree.xml.lua" func="Item_SetLevel" />
+			<SetExpand file="Tree.xml.lua" func="Item_SetExpand" />
+			<SetText file="Tree.xml.lua" func="Item_SetText" />
+			<SetSelect file="Tree.xml.lua" func="Item_SetSelect" />
+		</method_def>
+		<event_def>
+			
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="bkg" class="LayoutObject">
+					<attr>
+						<left></left>
+						<top></top>
+						<width>father.width</width>
+						<height>father.height</height>
+					</attr>
+					<children>
+						<obj id="expand" class="ImageObject">
+							<attr>
+								<left></left>
+								<top>(father.height-9)/2</top>
+								<width>9</width>
+								<height>9</height>
+							</attr>
+							<children>
+								
+							</children>
+							<eventlist>
+								<event name="OnLButtonDown" file="Tree.xml.lua" func="expand_OnLButtonDown" />
+							</eventlist>
+						</obj>
+						<obj id="text" class="TextObject">
+							<attr>
+								<left>14</left>
+								<top></top>
+								<width>father.width</width>
+								<height>father.height</height>
+								<text>树测试</text>
+								<valign>center</valign>
+							</attr>
+						</obj>
+					</children>
+					<eventlist>
+						
+					</eventlist>
+				</obj>
+				<obj id="SelectBkg" class="TextureObject">
+					<attr>
+						<left></left>
+						<top></top>
+						<width>father.width</width>
+						<height>father.height</height>
+					</attr>
+					<children>
+						
+					</children>
+					<eventlist>
+						
+					</eventlist>
+				</obj>
+			</children>
+			<eventlist>
+				<event name="OnLButtonDown" file="Tree.xml.lua" func="Item_OnLButtonDown" />
+				<event name="OnLButtonDbClick" file="Tree.xml.lua" func="Item_OnLButtonDbClick" />
+				<event name="OnDestroy">
+					local arg = {...}
+					local ctrl = arg[1]:GetParent()
+					ctrl:SetFocus(true)
+				</event>
+				<event name="OnInitControl" file="Tree.xml.lua" func="Item_OnInitControl" />
+			</eventlist>
+		</objtemplate>
+	</control>
+</xlue>

@@ -1,0 +1,75 @@
+<XLUE>
+	<resource>
+		<imagelist id="imagelist.vscrollbar.small.thumb" vertical="0" splitter="1" varyblock="1" image="bitmap\scrollbar.vsb.small.thumb.png"/>
+		<texture id="texture.vsb.small.thumb.normal" type="ThreeInOneV" imagelist="imagelist.vscrollbar.small.thumb" index="1" />
+		<texture id="texture.vsb.small.thumb.hover" type="ThreeInOneV" imagelist="imagelist.vscrollbar.small.thumb" index="2" />
+		<texture id="texture.vsb.small.thumb.down" type="ThreeInOneV" imagelist="imagelist.vscrollbar.small.thumb" index="3" />
+		<texture id="texture.vsb.small.bkg.normal" type="Stretch" image="bitmap\scrollbar.vsb.small.bkg.hover.png"/>
+		<texture id="texture.vsb.small.bkg.hover" type="Stretch" image="bitmap\scrollbar.vsb.small.bkg.hover.png"/>
+		
+		<imagelist id="imagelist.hscrollbar.small.thumb" vertical="0" splitter="1" varyblock="1" image="bitmap\scrollbar.hsb.small.thumb.png"/>
+		<texture id="texture.hsb.small.thumb.normal" type="ThreeInOneH" imagelist="imagelist.hscrollbar.small.thumb" index="1" />
+		<texture id="texture.hsb.small.thumb.hover" type="ThreeInOneH" imagelist="imagelist.hscrollbar.small.thumb" index="2" />
+		<texture id="texture.hsb.small.thumb.down" type="ThreeInOneH" imagelist="imagelist.hscrollbar.small.thumb" index="3" />
+		<texture id="texture.hsb.small.bkg.normal" type="Stretch" image="bitmap\scrollbar.hsb.small.bkg.hover.png"/>
+		<texture id="texture.hsb.small.bkg.hover" type="Stretch" image="bitmap\scrollbar.hsb.small.bkg.hover.png"/>	
+	
+		<imagelist id="imagelist.category.arrow" splitter="1" vertical="0" varyblock="0" blocksize="9" image="bitmap\imagelist.category.arrow.png"/>
+		<bitmap id="bitmap.categorytree.unexpanded.normal" imagelist="imagelist.category.arrow" index="1"/>  
+		<bitmap id="bitmap.categorytree.unexpanded.hover" imagelist="imagelist.category.arrow" index="2"/>  
+		<bitmap id="bitmap.categorytree.unexpanded.down" imagelist="imagelist.category.arrow" index="3"/>  
+		<bitmap id="bitmap.categorytree.expanded.normal" imagelist="imagelist.category.arrow" index="4"/>  
+		<bitmap id="bitmap.categorytree.expanded.hover" imagelist="imagelist.category.arrow" index="5"/>  
+		<bitmap id="bitmap.categorytree.expanded.down" imagelist="imagelist.category.arrow" index="6"/>
+	
+		<imagelist id="imagelist.platform.button.image" vertical="0" splitter="1" varyblock="1" image="bitmap\imagelist.platform.button.png"/>
+		<bitmap id="bitmap.new.sysbtn.skin.normal" imagelist="imagelist.platform.button.image" index="1"/>
+		<bitmap id="bitmap.new.sysbtn.skin.hover" imagelist="imagelist.platform.button.image" index="2"/>
+		<bitmap id="bitmap.new.sysbtn.skin.down" imagelist="imagelist.platform.button.image" index="3"/>
+		<bitmap id="bitmap.new.sysbtn.skin.disable" imagelist="imagelist.platform.button.image" index="4"/>
+		<bitmap id="bitmap.mainwnd.menu.normal" imagelist="imagelist.platform.button.image" index="5"/>
+		<bitmap id="bitmap.mainwnd.menu.hover" imagelist="imagelist.platform.button.image" index="6"/>
+		<bitmap id="bitmap.mainwnd.menu.down" imagelist="imagelist.platform.button.image" index="7"/>
+		<bitmap id="bitmap.mainwnd.menu.disable" imagelist="imagelist.platform.button.image" index="8"/>
+		<bitmap id="bitmap.sysbtn.mini.normal" imagelist="imagelist.platform.button.image" index="9"/>
+		<bitmap id="bitmap.sysbtn.mini.hover" imagelist="imagelist.platform.button.image" index="10"/>
+		<bitmap id="bitmap.sysbtn.mini.down" imagelist="imagelist.platform.button.image" index="11"/>
+		<bitmap id="bitmap.sysbtn.mini.disable" imagelist="imagelist.platform.button.image" index="12"/>
+		<bitmap id="bitmap.sysbtn.max.normal" imagelist="imagelist.platform.button.image" index="13"/>
+		<bitmap id="bitmap.sysbtn.max.hover" imagelist="imagelist.platform.button.image" index="14"/>
+		<bitmap id="bitmap.sysbtn.max.down" imagelist="imagelist.platform.button.image" index="15"/>
+		<bitmap id="bitmap.sysbtn.max.disable" imagelist="imagelist.platform.button.image" index="16"/>
+		<bitmap id="bitmap.sysbtn.restore.normal" imagelist="imagelist.platform.button.image" index="17"/>
+		<bitmap id="bitmap.sysbtn.restore.hover" imagelist="imagelist.platform.button.image" index="18"/>
+		<bitmap id="bitmap.sysbtn.restore.down" imagelist="imagelist.platform.button.image" index="19"/>
+		<bitmap id="bitmap.sysbtn.restore.disable" imagelist="imagelist.platform.button.image" index="20"/>
+		<bitmap id="bitmap.sysbtn.close.normal" imagelist="imagelist.platform.button.image" index="21"/>
+		<bitmap id="bitmap.sysbtn.close.hover" imagelist="imagelist.platform.button.image" index="22"/>
+		<bitmap id="bitmap.sysbtn.close.down" imagelist="imagelist.platform.button.image" index="23"/>
+		<bitmap id="bitmap.sysbtn.close.disable" imagelist="imagelist.platform.button.image" index="24"/>	
+	
+		<texture id="texture.bttaskdlg.tab_client.bkg" type="NineInOne" image="bitmap\bttask_dlg_bkg.png"/>
+		
+		<texture id="texture.listctrl.item.bkg.select" type="Normal" image="bitmap\list_item_bkg_select.png">
+			<part id="texture">
+				<src left="0" top="0" width="1" height="23"/>
+				<dest left="0" top="0" width="width" height="height"/>					
+			</part>
+		</texture>
+		
+		<imagelist id="imagelist.newtask.edit" vertical="0" splitter="1" varyblock="1" image="bitmap\imagelist.newtask.edit.png"/>
+        <bitmap id="bitmap.url.icon" imagelist="imagelist.newtask.edit" index="1"/>
+        <bitmap id="bitmap.filename.icon" imagelist="imagelist.newtask.edit" index="2"/>
+        <bitmap id="bitmap.path.icon" imagelist="imagelist.newtask.edit" index="3"/>
+        <texture id="texture.combobtn.normal" imagelist="imagelist.newtask.edit" index="4"/>
+        <texture id="texture.combobtn.hover" imagelist="imagelist.newtask.edit" index="5"/>
+        <texture id="texture.combobtn.down" imagelist="imagelist.newtask.edit" index="6"/>
+        <bitmap id="bitmap.combobtn.normal" imagelist="imagelist.newtask.edit" index="4"/>
+        <bitmap id="bitmap.combobtn.hover" imagelist="imagelist.newtask.edit" index="5"/>
+        <bitmap id="bitmap.combobtn.down" imagelist="imagelist.newtask.edit" index="6"/>
+        <texture id="texture.edit.bkg.disable" type="NineInOne" imagelist="imagelist.newtask.edit" index="10"/>
+        <texture id="texture.edit.bkg.normal" type="NineInOne" imagelist="imagelist.newtask.edit" index="11"/>
+        <texture id="texture.edit.bkg.hover" type="NineInOne" imagelist="imagelist.newtask.edit" index="12"/>
+        <texture id="texture.edit.light" type="NineInOne" imagelist="imagelist.newtask.edit" index="12"/>
+	</resource>
+</XLUE>

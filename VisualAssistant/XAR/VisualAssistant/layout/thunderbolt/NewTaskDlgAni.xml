@@ -1,0 +1,81 @@
+<xlue>
+
+<animation_def class="Thunder.Animation.DlgHidden">
+	<attr_def>
+		<attr name="ChangeX" type="int" >
+			<default>15</default>
+		</attr>
+		<attr name="ChangeY" type="int" >
+			<default>15</default>
+		</attr>
+		<!-- true false -->
+		<attr name="ZoomOut" type="bool">
+			<default>true</default>
+		</attr>
+	</attr_def>
+	<method_def>
+		<Action file="NewTaskDlgAni.lua" func="DlgHidden_Action"/>
+		<BindObj file="NewTaskDlgAni.lua" func="DlgHidden_BindObj"/>
+		<GetBindObj file="NewTaskDlgAni.lua" func="DlgHidden_GetBindObj" />
+	</method_def>
+</animation_def>
+
+<animation_def class="Thunder.Animation.DlgPop">
+	<attr_def>
+		<attr name="ChangeX" type="int" >
+			<default>15</default>
+		</attr>
+		<attr name="ChangeY" type="int" >
+			<default>15</default>
+		</attr>
+		<!--true ,false -->
+		<attr name="ZoomOut" type="bool">
+			<default>true</default>
+		</attr>
+	</attr_def>
+	<method_def>
+		<Action file="NewTaskDlgAni.lua" func="DlgPop_Action"/>
+		<BindObj file="NewTaskDlgAni.lua" func="DlgPop_BindObj"/>
+		<GetBindObj file="NewTaskDlgAni.lua" func="DlgPop_GetBindObj" />
+	</method_def>
+</animation_def>
+
+<animationtemplate id="NewTask.PopAni" class="TurnObjectAnimation">
+    <attr>
+		<curve>dlg.turn.curve</curve>
+	    <totaltime>500</totaltime>
+		<perspective>1000</perspective>
+		<turntype>roundy</turntype>
+		<zoffset>0</zoffset>
+	</attr>
+</animationtemplate>
+
+<animationtemplate id="Dlg.StartAni" class="Thunder.Animation.DlgHidden">
+	<attr>
+		<curve>dlg.hidden.curve</curve>
+		<totaltime>250</totaltime>
+		<ZoomOut>false</ZoomOut>
+		<ChangeX>20</ChangeX>
+		<ChangeY>20</ChangeY>
+	</attr>
+</animationtemplate>
+
+<animationtemplate id="Dlg.HiddenAni" class="Thunder.Animation.DlgHidden">
+	<attr>
+		<curve>dlg.hidden.curve</curve>
+		<totaltime>300</totaltime>
+		<ZoomOut>true</ZoomOut>
+	</attr>
+</animationtemplate>
+
+<animationtemplate id="Dlg.PopAni" class="Thunder.Animation.DlgPop">
+	<attr>
+		<curve>dlg.pop.curve</curve>
+		<totaltime>300</totaltime>
+		<ZoomOut>true</ZoomOut>
+	</attr>
+</animationtemplate>
+
+
+
+</xlue>

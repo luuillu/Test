@@ -1,0 +1,100 @@
+<xlue>
+	<control class="VisualAssistant.Main">
+		<attr_def>
+			
+		</attr_def>
+		<method_def>
+			
+		</method_def>
+		<event_def>
+			
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="title" class="LayoutObject">
+					<attr>
+						<left></left>
+						<top></top>
+						<width>father.width</width>
+						<height>40</height>
+					</attr>
+					<children>
+						
+					</children>
+					<eventlist>
+						
+					</eventlist>
+				</obj>
+				<obj id="body" class="LayoutObject">
+					<attr>
+						<left>5</left>
+						<top>40</top>
+						<width>father.width-10</width>
+						<height>father.height-20-40</height>
+					</attr>
+					<children>
+						<obj id="TreePanel" class="VisualAssistant.Tree">
+							<attr>
+								<left></left>
+								<top></top>
+								<width>200</width>
+								<height>father.height</height>
+							</attr>
+							<children>
+								
+							</children>
+							<eventlist>
+								
+							</eventlist>
+						</obj>					
+						<obj id="view" class="VisualAssistant.ImageView">
+							<attr>
+								<left>200</left>
+								<top></top>
+								<width>father.width-400</width>
+								<height>father.height</height>
+							</attr>
+						</obj>
+						<obj id="PropertyPanel" class="VisualAssistant.Property">
+							<attr>
+								<left>father.width-200</left>
+								<top></top>
+								<width>200</width>
+								<height>father.height</height>
+							</attr>
+							<children>
+								
+							</children>
+							<eventlist>
+								
+							</eventlist>
+						</obj>
+					</children>
+					<eventlist>
+						
+					</eventlist>
+				</obj>
+
+				<obj id="foot" class="LayoutObject">
+					<attr>
+						<left></left>
+						<top>father.height-20</top>
+						<width>father.width</width>
+						<height>20</height>
+					</attr>
+					<children>
+						
+					</children>
+					<eventlist>
+						
+					</eventlist>
+				</obj>				
+			</children>
+			<eventlist>
+				<event name="OnInitControl" file="Main.xml.lua" func="OnInitControl" />
+				<event name="OnDestroy" file="Main.xml.lua" func="OnDestroy" />
+			</eventlist>
+		</objtemplate>
+	</control>
+	
+</xlue>

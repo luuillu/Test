@@ -1,0 +1,34 @@
+<xlue>
+	<control class="VisualAssistant.Property">
+		<attr_def>
+			
+		</attr_def>
+		<method_def>
+			<InsertPropertyItems file="Property.xml.lua" func="InsertPropertyItems" />
+			<GetPropertyItems file="Property.xml.lua" func="GetPropertyItems" />
+		</method_def>
+		<event_def>
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="list" class="VisualAssistant.List">
+					<attr>
+						<left></left>
+						<top></top>
+						<width>father.width</width>
+						<height>father.height</height>
+					</attr>
+					<children>
+						
+					</children>
+					<eventlist>
+					</eventlist>
+				</obj>
+			</children>
+			<eventlist>
+				<event name="OnInitControl" file="Property.xml.lua" func="OnInitControl" />
+			</eventlist>
+		</objtemplate>
+	</control>
+
+</xlue>

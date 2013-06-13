@@ -1,0 +1,69 @@
+<xlue>
+	<control class="VisualAssistant.ScrollBar">
+		<attr_def>
+			<attr name="Type" type="int"></attr>
+			<attr name="ThumbTexture" type="string"></attr>
+			<attr name="BkgTextureID" type="string"></attr>
+		</attr_def>
+		<method_def>
+			<SetViewSize file="ScrollBar.xml.lua" func="SetViewSize" />
+			<SetBkgSize file="ScrollBar.xml.lua" func="SetBkgSize" />
+			<MoveDistance file="ScrollBar.xml.lua" func="MoveDistance" />
+			<Navigate file="ScrollBar.xml.lua" func="Navigate" />
+			<IsShow file="ScrollBar.xml.lua" func="IsShow" />
+			<UpdataScrollPos file="ScrollBar.xml.lua" func="UpdataScrollPos" />
+		</method_def>
+		<event_def>
+			<OnShowChange>
+				<param>
+					<bool/>
+				</param>
+			</OnShowChange>
+			<OnViewChange>
+				<param>
+					<int/>
+					<int/>
+				</param>
+			</OnViewChange>
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="bkg" class="TextureObject">
+					<attr>
+						<left></left>
+						<top></top>
+						<width>father.width</width>
+						<height>father.height</height>
+					</attr>
+					<children>						
+						<obj id="thumb" class="TextureObject">
+							<attr>
+								<left></left>
+								<top></top>
+								<width></width>
+								<height></height>
+								
+							</attr>
+							<eventlist>
+								<event name="OnMouseEnter" file="ScrollBar.xml.lua" func="thumb_OnMouseEnter"/>
+								<event name="OnMouseLeave" file="ScrollBar.xml.lua" func="thumb_OnMouseLeave"/>								
+							</eventlist>
+						</obj>
+					</children>
+					<eventlist>
+					
+					</eventlist>
+				</obj>
+			</children>
+			<eventlist>
+				<event name="OnInitControl" file="ScrollBar.xml.lua" func="OnInitControl" />
+				<event name="OnLButtonDown" file="ScrollBar.xml.lua" func="OnLButtonDown" />
+				<event name="OnLButtonUp" file="ScrollBar.xml.lua" func="OnLButtonUp"/>
+				<event name="OnMouseMove" file="ScrollBar.xml.lua" func="OnMouseMove"/>	
+				<event name="OnMouseWheel" file="ScrollBar.xml.lua" func="OnMouseWheel" />
+			</eventlist>
+		</objtemplate>
+	</control>
+	
+	
+</xlue>

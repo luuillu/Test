@@ -1,0 +1,106 @@
+<xlue>
+	<control class="VisualAssistant.BaseList">
+		<attr_def>
+			<attr name="ItemHeight" type="string" ><default>23</default></attr>
+			<attr name="ItemWidth" type="string" ><default>400</default></attr>
+			<attr name="ItemClass" type="string" ><default></default></attr>
+		</attr_def>
+		<method_def>
+			<SetItemCount  file="BaseList.xml.lua" func="SetItemCount"/>
+			<SetItemWidth  file="BaseList.xml.lua" func="SetItemWidth"/>
+			<UpdateUI  file="BaseList.xml.lua" func="UpdateUI"/>
+			<Navigate  file="BaseList.xml.lua" func="Navigate"/>
+		</method_def>
+		<event_def>
+		
+			<OnInitItem>
+				<param>
+					<int/>
+					<layoutobj/>
+				</param>
+			</OnInitItem>
+			<OnUpdateView>
+				<param>
+					<table/>
+				</param>
+			</OnUpdateView>
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="view" class="LayoutObject">
+					<attr>
+						<left></left>
+						<top></top>
+						<width></width>
+						<height></height>
+						<limitchild>1</limitchild>
+					</attr>
+					<children>
+						
+					</children>
+					<eventlist>
+						
+					</eventlist>
+				</obj>
+				<obj id="scroll" class="Assistant.ControlWithScroll">
+					<attr>
+						<left>1</left>
+						<top>1</top>
+						<width>father.width-2</width>
+						<height>father.height-2</height>
+						<BindViewID>control:view</BindViewID>
+					</attr>
+					<children>
+						
+					</children>
+					<eventlist>
+						<event name="OnViewPosChange" file="BaseList.xml.lua" func="scrollOnViewPosChange" />
+					</eventlist>
+				</obj>
+				<obj id="bkg" class="TextureObject">
+					<attr>
+						<left></left>
+						<top></top>
+						<width>father.width</width>
+						<height>father.height</height>
+						<texture>texture.bttaskdlg.tab_client.bkg</texture>
+					</attr>
+					<children>
+						
+					</children>
+					<eventlist>
+						
+					</eventlist>
+				</obj>
+			</children>
+			<eventlist>
+				<event name="OnBind" file="BaseList.xml.lua" func="OnBind" />
+			</eventlist>
+		</objtemplate>
+	</control>
+	
+	<control class="VisualAssistant.BaseList.TestItem">
+		<attr_def>
+			
+		</attr_def>
+		<method_def>
+			
+		</method_def>
+		<event_def>
+			
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="text" class="TextObject">
+					<attr>
+						<left></left>
+						<top></top>
+						<width>father.width</width>
+						<height>father.height</height>
+						<text>仅供测试</text>
+					</attr>
+				</obj>
+			</children>
+		</objtemplate>
+	</control>
+</xlue>

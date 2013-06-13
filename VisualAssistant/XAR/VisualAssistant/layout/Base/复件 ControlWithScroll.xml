@@ -1,0 +1,91 @@
+<xlue>
+	<control class="Assistant.ControlWithScroll2">
+		<attr_def>
+			<attr name="BindViewID" type="string" ></attr>
+		</attr_def>
+		<method_def>
+			<SetBkgRange file="ControlWithScroll.xml.lua" func="SetBkgRange"/>
+			<UpdateView file="ControlWithScroll.xml.lua" func="UpdateViewSize"/>
+		</method_def>
+		<event_def>
+			<OnViewPosChange>
+				<param>
+					<int/>
+					<int/>
+					<int/>
+					<int/>
+				</param>
+			</OnViewPosChange>
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="vscroll" class="Thunder.ScrollBar">
+					<attr>
+						<Type>1</Type>
+						<NormalBkn>texture.vsb.small.bkg.normal</NormalBkn>
+						<HoverBkn>texture.vsb.small.bkg.hover</HoverBkn>
+						<ThumbBtn_normal>texture.vsb.small.thumb.normal</ThumbBtn_normal>
+						<ThumbBtn_hover>texture.vsb.small.thumb.hover</ThumbBtn_hover>
+						<ThumbBtn_down>texture.vsb.small.thumb.down</ThumbBtn_down>
+						<NormalDecorateID>scrollbar.vsb.small.decorate.normal</NormalDecorateID>
+						<HoverDecorateID>scrollbar.vsb.small.decorate.hover</HoverDecorateID>
+						<DownDecorateID>scrollbar.vsb.small.decorate.down</DownDecorateID>
+						<ThumbBtnWidth>12</ThumbBtnWidth>
+						<SideBtnLength>0</SideBtnLength>
+						<PageSize>0</PageSize>
+						<RangeBegin>0</RangeBegin>
+						<RangeEnd>0</RangeEnd>
+						<left>father.width-12</left>
+						<top>0</top>
+						<width>12</width>
+						<height>father.height</height>
+						<zorder>500</zorder>
+						<AutoVisibleChange>false</AutoVisibleChange>
+					</attr>
+					<eventlist>
+						<event name="OnVScroll" file="ControlWithScroll.xml.lua" func="OnVScroll" />
+						<event name="OnScrollBarMouseWheel" file="ControlWithScroll.xml.lua" func="OnScrollBarMouseWheel"/>
+						<event name="OnVisibleChanged" file="ControlWithScroll.xml.lua" func="OnVisibleChanged"/>
+						<event name="OnPosChange" file="ControlWithScroll.xml.lua" func="Scroll_OnPoschange"/>
+					</eventlist>
+				</obj>
+				<obj id="hscroll" class="Thunder.ScrollBar">
+					<attr>
+						<Type>0</Type>
+						<NormalBkn>texture.hsb.small.bkg.normal</NormalBkn>
+						<HoverBkn>texture.hsb.small.bkg.hover</HoverBkn>
+						<ThumbBtn_normal>texture.hsb.small.thumb.normal</ThumbBtn_normal>
+						<ThumbBtn_hover>texture.hsb.small.thumb.hover</ThumbBtn_hover>
+						<ThumbBtn_down>texture.hsb.small.thumb.down</ThumbBtn_down>
+						<NormalDecorateID>scrollbar.hsb.small.decorate.normal</NormalDecorateID>
+						<HoverDecorateID>scrollbar.hsb.small.decorate.hover</HoverDecorateID>
+						<DownDecorateID>scrollbar.hsb.small.decorate.down</DownDecorateID>
+						<ThumbBtnWidth>12</ThumbBtnWidth>
+						<SideBtnLength>0</SideBtnLength>
+						<PageSize>0</PageSize>
+						<RangeBegin>0</RangeBegin>
+						<RangeEnd>0</RangeEnd>
+						<left>0</left>
+						<top>father.height-12</top>
+						<width>father.width - 16</width>
+						<height>12</height>
+						<zorder>500</zorder>
+						<AutoVisibleChange>false</AutoVisibleChange>
+					</attr>
+					<eventlist>
+						<event name="OnHScroll" file="ControlWithScroll.xml.lua" func="OnHScroll" />
+						<event name="OnScrollBarMouseWheel" file="ControlWithScroll.xml.lua" func="OnScrollBarMouseWheel" />
+						<event name="OnVisibleChanged" file="ControlWithScroll.xml.lua" func="OnVisibleChanged" />
+						<event name="OnPosChange" file="ControlWithScroll.xml.lua" func="Scroll_OnPoschange"/>
+					</eventlist>
+				</obj>
+			</children>
+			<eventlist>
+				<event name="OnPosChange" file="ControlWithScroll.xml.lua" func="OnPosChange"/>
+				<event name="OnInitControl" file="ControlWithScroll.xml.lua" func="OnInitControl" />
+				<event name="OnDestroy" file="ControlWithScroll.xml.lua" func="OnDestroy" />
+			</eventlist>
+		</objtemplate>
+	</control>
+
+</xlue>

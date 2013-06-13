@@ -1,0 +1,92 @@
+<xlue>
+	<control class="VisualAssistant.ImageView">
+		<attr_def>
+			
+		</attr_def>
+		<method_def>
+			
+		</method_def>
+		<event_def>
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="boarder" class="TextureObject">
+					<attr>
+						<left></left>
+						<top></top>
+						<width>father.width</width>
+						<height>father.height</height>
+						<texture>texture.bttaskdlg.tab_client.bkg</texture>
+					</attr>
+				</obj>
+				
+				<obj id="scroll" class="Assistant.ControlWithScroll">
+					<attr>
+						<left>1</left>
+						<top>1</top>
+						<width>father.width-2</width>
+						<height>father.height-2</height>
+						<BindViewID>control:view</BindViewID>
+					</attr>
+					<children>
+						
+					</children>
+					<eventlist>
+						<event name="OnViewPosChange" file="ImageView.xml.lua" func="scrollOnViewPosChange" />
+					</eventlist>
+				</obj>		
+				<obj id="view" class="LayoutObject">
+					<attr>
+						<limitchild>1</limitchild>
+						<enableinput>1</enableinput>
+					</attr>
+					<children>
+
+						<obj id="bkg" class="ImageObject">
+							<attr>
+								<left></left>
+								<top></top>
+								<width></width>
+								<height></height>
+								
+								<zorder></zorder>
+							</attr>
+							<children>
+								<obj id="rect" class="VisualAssistant.Rect">
+									<attr>
+										<width>father.width</width>
+										<height>father.height</height>
+										<zorder>1000</zorder>
+										<cursor>IDC_CROSS</cursor>
+									</attr>
+									<eventlist>
+									</eventlist>
+								</obj>
+								<obj id="controlBkg" class="ImageObject">
+									<attr>
+										<left></left>
+										<top>100</top>
+										<width>father.width</width>
+										<height>father.height</height>
+										<zorder>100</zorder>
+									</attr>
+								</obj>
+							</children>
+							<eventlist>
+								
+							</eventlist>
+						</obj>
+					</children>
+					<eventlist>
+
+
+
+					</eventlist>
+				</obj>
+			</children>
+			<eventlist>
+				<event name="OnInitControl" file="ImageView.xml.lua" func="OnInitControl" />
+			</eventlist>
+		</objtemplate>
+	</control>
+</xlue>
